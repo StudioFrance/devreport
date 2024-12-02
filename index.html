@@ -25,10 +25,27 @@
         /* タイトルのスタイル */
         #divmain h1 {
             text-align: center;
-            margin: 0;
-            padding: 20px 0; /* タイトル上下に余白を設定 */
-            background-color: black; /* タイトル背景色 */
+            margin: 100px 0; /* タイトル上下に100pxの余白を設定 */
+            padding: 0;
+            background-color: gray; /* タイトル背景色 */
             color: white;
+            white-space: nowrap; /* 改行を禁止 */
+            overflow: hidden; /* 必要に応じてはみ出し部分を隠す */
+            text-overflow: ellipsis; /* はみ出した場合、末尾に「...」を表示 */
+            font-size: 2.5rem; /* デフォルトのフォントサイズ */
+        }
+
+        /* メディアクエリを使用してフォントサイズを調整 */
+        @media (max-width: 768px) {
+            #divmain h1 {
+                font-size: 2rem; /* タブレット幅以下でフォントを小さく */
+            }
+        }
+
+        @media (max-width: 480px) {
+            #divmain h1 {
+                font-size: 1.5rem; /* スマートフォン幅でさらに小さく */
+            }
         }
 
         /* 画像コンテナ */
@@ -60,11 +77,11 @@
             <img src="captures/image03.png" alt="Image 2">
             <img src="captures/image04.png" alt="Image 2">
             <img src="captures/image05.png" alt="Image 2">
+            <img src="captures/image09.jpg" alt="Image 2">
             <img src="captures/image06.jpg" alt="Image 2">
             <img src="captures/image06.png" alt="Image 2">
             <img src="captures/image07.jpg" alt="Image 2">
             <img src="captures/image08.jpg" alt="Image 2">
-            <img src="captures/image09.jpg" alt="Image 2">
         </div>
     </div>
 </body>
