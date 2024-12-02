@@ -5,37 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>s i m o o n  d e v  r e p o r t</title>
     <style>
+        /* ページ全体のスタイル */
         body {
             margin: 0;
             padding: 0;
-            background-color: black;
-            color: white;
+            background-color: black; /* 背景を黒に設定 */
+            color: white; /* テキスト色を白に設定 */
             font-family: Arial, sans-serif;
+            overflow-x: hidden; /* 横スクロールを無効化 */
+        }
+
+        /* 全体のコンテナ */
+        #divmain {
+            width: 100%; /* ブラウザ幅いっぱい */
+            padding: 0 20px; /* 左右に20pxの余白を設定 */
+            box-sizing: border-box; /* パディングを幅に含める */
         }
 
         /* タイトルのスタイル */
-        h1 {
-            margin: 0;
-            padding: 20px 0;
-            background-color: #333;
+        #divmain h1 {
             text-align: center;
-            width: 100%;
-            box-sizing: border-box;
+            margin: 0;
+            padding: 20px 0; /* タイトル上下に余白を設定 */
+            background-color: gray; /* タイトル背景色 */
+            color: white;
         }
 
-        /* コンテナのスタイル */
-        .container {
+        /* 画像コンテナ */
+        .images {
             display: flex;
-            flex-direction: column;
+            flex-direction: column; /* 縦に画像を並べる */
             align-items: center;
-            padding: 20px;
+            gap: 100px; /* 画像の上下間隔を100pxに設定 */
+            margin-top: 20px;
         }
 
         /* 画像のスタイル */
-        .image {
-            width: calc(100% - 40px);
-            max-width: 600px;
-            margin-bottom: 20px;
+        img {
+            max-width: calc(100% - 40px); /* ブラウザ幅から左右20pxずつ引いたサイズ */
+            height: auto;
         }
     </style>
 </head>
