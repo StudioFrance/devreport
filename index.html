@@ -3,52 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>simoon dev report</title>
+    <title>s i m o o n  d e v  r e p o r t</title>
     <style>
         body {
+            background-color: black;
+            color: white;
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
         }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        .images {
+            display: flex;
+            justify-content: center;
+            gap: 100px; /* 画像間のスペース */
+            margin-top: 50px;
+        }
+
         img {
-            max-width: 90%;
+            max-width: 300px; /* 画像の最大幅を設定（任意） */
             height: auto;
-            margin-top: 20px;
-            border: 2px solid #ccc;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        input {
-            margin-top: 20px;
-            padding: 10px;
-            font-size: 16px;
-            width: 300px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-left: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>simoon dev report</h1>
-    <input type="text" id="fileNameInput" placeholder="Enter image file name">
-    <button onclick="showImage()">Show Image</button>
-    <div id="imageContainer">
-        <img id="displayedImage" src="" alt="Your selected image will appear here.">
+    <!-- タイトル -->
+    <h1>s i m o o n  d e v  r e p o r t</h1>
+
+    <!-- 画像を表示するコンテナ -->
+    <div class="images">
+        <img src="captures/image01.png" alt="Image 1">
+        <img src="captures/image02.png" alt="Image 2">
     </div>
-
-    <script>
-        function showImage() {
-            const fileName = document.getElementById('fileNameInput').value;
-            const imagePath = `captures/${fileName}`;
-            const imageElement = document.getElementById('displayedImage');
-
-            imageElement.src = imagePath;
-            imageElement.alt = fileName;
-        }
-    </script>
 </body>
 </html>
