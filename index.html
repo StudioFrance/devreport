@@ -5,29 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>s i m o o n  d e v  r e p o r t</title>
     <style>
+        /* ページ全体のスタイル */
         body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
+            background-color: black; /* 背景を黒 */
+            color: white; /* テキストを白 */
+            font-family: Arial, sans-serif;
         }
 
+        /* タイトルのスタイル */
         h1 {
-            margin: 20px 0;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #333; /* タイトル部分の背景色 */
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
         }
 
-        .images {
+        /* コンテナのスタイル */
+        .container {
             display: flex;
-            justify-content: center;
-            gap: 100px; /* 画像間のスペース */
-            margin-top: 50px;
+            flex-direction: column; /* 縦方向に配置 */
+            align-items: center; /* 中央揃え */
+            padding: 20px;
         }
 
-        img {
-            max-width: 300px; /* 画像の最大幅を設定（任意） */
-            height: auto;
+        /* 画像のスタイル */
+        .image {
+            width: calc(100% - 40px); /* 左右に20pxずつ余白を設定 */
+            max-width: 600px; /* 最大幅を制限 */
+            margin-bottom: 20px; /* 縦方向の間隔を20px */
         }
     </style>
 </head>
