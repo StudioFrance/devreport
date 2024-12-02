@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            max-width: 90%;
+            height: auto;
+            margin-top: 20px;
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        input {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Viewer</h1>
+    <p>Enter the file name of the image (e.g., `example.jpg`):</p>
+    <input type="text" id="fileNameInput" placeholder="Enter image file name">
+    <button onclick="showImage()">Show Image</button>
+    <div id="imageContainer">
+        <img id="displayedImage" src="" alt="Your selected image will appear here.">
+    </div>
+
+    <script>
+        function showImage() {
+            const fileName = document.getElementById('fileNameInput').value;
+            const imagePath = `captures/${fileName}`;
+            const imageElement = document.getElementById('displayedImage');
+
+            imageElement.src = imagePath;
+            imageElement.alt = fileName;
+        }
+    </script>
+</body>
+</html>
