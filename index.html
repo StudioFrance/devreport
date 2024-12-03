@@ -13,10 +13,14 @@
             color: white; /* テキスト色を白に設定 */
             font-family: Arial, sans-serif;
             overflow-x: hidden; /* 横スクロールを無効化 */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* フッターを下部に固定するために使用 */
         }
 
         /* 全体のコンテナ */
         #divmain {
+            flex: 1;
             width: 100%; /* ブラウザ幅いっぱい */
             padding: 0 5px; /* 左右に20pxの余白を設定 */
             box-sizing: border-box; /* パディングを幅に含める */
@@ -62,6 +66,14 @@
             max-width: calc(100% - 40px); /* ブラウザ幅から左右20pxずつ引いたサイズ */
             height: auto;
         }
+        
+        /* フッターのスタイル */
+        footer {
+            text-align: center; /* 中央寄せ */
+            padding: 20px 0; /* 上下に余白を設定 */
+            background-color: #333; /* フッター背景色 */
+            color: white; /* フッターテキスト色 */
+        }
     </style>
 </head>
 <body>
@@ -81,10 +93,15 @@
             <img src="captures/image09.jpg" alt="Image 2">
             <img src="captures/image06.jpg" alt="Image 2">
             <img src="captures/image06.png" alt="Image 2">
-            <img src="captures/image071.jpg" alt="Image 2">
+            <img src="captures/image071.png" alt="Image 2">
             <img src="captures/image07.jpg" alt="Image 2">
             <img src="captures/image08.jpg" alt="Image 2">
         </div>
     </div>
+    
+    <!-- フッター -->
+    <footer>
+        &copy; 2025 simoon by studio france
+    </footer>
 </body>
 </html>
