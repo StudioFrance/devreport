@@ -9,9 +9,6 @@
         body {
             margin: 0;
             padding: 0;
-            background: url("captures/background.jpg") no-repeat center top;
-            background-size: cover;
-            background-attachment: scroll;
             
             background-color: black; /* 背景を黒に設定 */
             color: white; /* テキスト色を白に設定 */
@@ -21,11 +18,23 @@
             flex-direction: column;
             min-height: 100vh; /* フッターを下部に固定するために使用 */
         }
+        
+        /* 背景画像のスタイル */
+        .background-image {
+            position: fixed; /* 背景画像を固定 */
+            top: 0;
+            left: 0;
+            width: 100%; /* 横幅いっぱいに設定 */
+            height: auto; /* 高さは自動調整 */
+            image-rendering: pixelated; /* ピクセル化を有効化 */
+            image-rendering: crisp-edges; /* 一部ブラウザで互換性を確保 */
+        }
 
         /* 全体のコンテナ */
         #divmain {
             flex: 1;
             width: 100%; /* ブラウザ幅いっぱい */
+            z-index: 1; /* 背景画像の上に表示 */
             padding: 0 5px; /* 左右に20pxの余白を設定 */
             box-sizing: border-box; /* パディングを幅に含める */
         }
@@ -86,6 +95,9 @@
     </style>
 </head>
 <body>
+    <!-- 背景画像 -->
+    <img src="captures/background.jpg" alt="Background" class="background-image">
+
     <!-- メインコンテナ -->
     <div id="divmain">
         <!-- タイトル -->
