@@ -17,29 +17,24 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh; /* フッターを下部に固定するために使用 */
-        }
-        
-        /* 背景画像を中央揃えに */
+        } 
+
+        /* 背景画像コンテナ */
         .background-image-container {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 50%;
-            transform: translateX(-50%); /* 中央揃え */
-            width: 100%; /* 横幅いっぱいに設定 */
-            height: 150%; /* ページ全体より大きくしてスクロール時に対応 */
-            overflow: hidden; /* はみ出し部分を隠す */
-            z-index: -1; /* 背景画像を後ろに配置 */
+            transform: translateX(-50%);
+            width: 100%;
+            height: auto;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+            z-index: -1;
         }
 
         .background-image-container img {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%); /* 背景画像を中央揃え */
             width: 100%;
             height: auto;
-            image-rendering: pixelated; /* ピクセル化を有効化 */
-            image-rendering: crisp-edges; /* 一部ブラウザで互換性を確保 */
         }
 
         /* 全体のコンテナ */
@@ -108,7 +103,7 @@
 <body>
     <!-- 背景画像コンテナ -->
     <div class="background-image-container">
-        <img src="captures/background.jpg" alt="Background" class="background-image">
+        <img src="captures/background.jpg" alt="Background" id="background-image">
     </div>
     
     <!-- メインコンテナ -->
@@ -138,5 +133,18 @@
         <p>&copy; 2025 simoon by studio france</p>
         <p>studio.france0131@gmail.com</p>
     </footer>
+    
+    <script>
+    // 背景画像のスクロール比率
+    const backgroundImage = document.getElementById("background-image");
+    const scrollRatio = 0.5; // スクロール比率 0.5 = 50%
+
+    window.addEventListener("scroll", () => {
+            // ページのスクロール量を取得
+            const scrollY = window.scrollY;
+            // 背景画像の位置を更新
+            backgroundImage.style.transform = `translateX(-50%) translateY(${scrollY * scrollRatio}px)`;
+        });
+    </script>
 </body>
 </html>
