@@ -64,17 +64,11 @@
             #divmain h1 {
                 font-size: 2rem; /* タブレット幅以下でフォントを小さく */
             }
-            img {
-                max-width: calc(80% - 10px); /* ブラウザ幅から左右20pxずつ引いたサイズ */
-            }
         }
 
         @media (max-width: 480px) {
             #divmain h1 {
                 font-size: 1.5rem; /* スマートフォン幅でさらに小さく */
-            }
-            img {
-                max-width: calc(95% - 10px); /* ブラウザ幅から左右20pxずつ引いたサイズ */
             }
         }
 
@@ -89,6 +83,7 @@
 
         /* 画像のスタイル */
         img {
+            max-width: calc(85% - 10px); /* ブラウザ幅から左右20pxずつ引いたサイズ */
             height: auto;
         }
         
