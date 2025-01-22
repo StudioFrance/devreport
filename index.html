@@ -19,14 +19,25 @@
             min-height: 100vh; /* フッターを下部に固定するために使用 */
         }
         
-        /* 背景画像のスタイル */
-        .background-image {
-            position: fixed; /* 背景画像を固定 */
-            align-items: center;
+        /* 背景画像を中央揃えに */
+        .background-image-container {
+            position: absolute;
             top: 0;
-            left: 0;
+            left: 50%;
+            transform: translateX(-50%); /* 中央揃え */
             width: 100%; /* 横幅いっぱいに設定 */
-            height: auto; /* 高さは自動調整 */
+            height: 150%; /* ページ全体より大きくしてスクロール時に対応 */
+            overflow: hidden; /* はみ出し部分を隠す */
+            z-index: -1; /* 背景画像を後ろに配置 */
+        }
+
+        .background-image-container img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%); /* 背景画像を中央揃え */
+            width: 100%;
+            height: auto;
             image-rendering: pixelated; /* ピクセル化を有効化 */
             image-rendering: crisp-edges; /* 一部ブラウザで互換性を確保 */
         }
@@ -95,9 +106,11 @@
     </style>
 </head>
 <body>
-    <!-- 背景画像 -->
-    <img src="captures/background.jpg" alt="Background" class="background-image">
-
+    <!-- 背景画像コンテナ -->
+    <div class="background-image-container">
+        <img src="captures/background.jpg" alt="Background" class="background-image">
+    </div>
+    
     <!-- メインコンテナ -->
     <div id="divmain">
         <!-- タイトル -->
