@@ -135,28 +135,5 @@
         <p>studio.france0131@gmail.com</p>
     </footer>
     
-
-    <script>
-        // 背景画像のスクロール比率
-        const backgroundImage = document.getElementById("background-image");
-
-        // ページと背景画像の高さを取得
-        const pageHeight = document.documentElement.scrollHeight;
-        const backgroundHeight = backgroundImage.naturalHeight;
-
-        window.addEventListener("scroll", () => {
-            // ページのスクロール量を取得
-            const scrollY = window.scrollY;
-
-            // スクロール比率を計算 (背景画像の動きの調整)
-            const scrollRatio = (pageHeight - window.innerHeight) / scrollY ;
-
-            // 背景画像の縦位置を調整
-            const backgroundMovement = (scrollRatio * (backgroundHeight - window.innerHeight));
-            
-            // 背景画像の位置を設定 (中央揃え)
-            backgroundImage.style.transform = `translate(-50%, -50%) translateY(${backgroundMovement}px)`;
-        });
-    </script>
 </body>
 </html>
