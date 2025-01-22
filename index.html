@@ -21,7 +21,7 @@
         } 
 
         /* 背景画像コンテナ */
-        .background-image-container {
+        .background {
             position: fixed;
             top: 50%;
             left: 50%;
@@ -33,9 +33,22 @@
             z-index: -1;
         }
 
-        .background-image-container img {
-            width: 100%;
-            height: auto;
+        /* Top位置の背景 */
+        .top {
+            background-image: url('captures/background-top.jpg');
+            background-position: top center; /* 上端を基準に配置 */
+        }
+
+        /* Middle位置の背景 */
+        .middle {
+            background-image: url('captures/background-middle.jpg');
+            background-position: center center; /* 中央を基準に配置 */
+        }
+
+        /* Bottom位置の背景 */
+        .bottom {
+            background-image: url('captures/background-bottom.jpg');
+            background-position: bottom center; /* 下端を基準に配置 */
         }
 
         /* 全体のコンテナ */
@@ -102,10 +115,14 @@
     </style>
 </head>
 <body>
-    <!-- 背景画像コンテナ -->
-    <div class="background-image-container">
-        <img src="captures/background.jpg" alt="Background" id="background-image">
-    </div>
+    <!-- 背景トップ -->
+    <div class="background top"></div>
+
+    <!-- 背景ミドル -->
+    <div class="background middle"></div>
+
+    <!-- 背景ボトム -->
+    <div class="background bottom"></div>
     
     <!-- メインコンテナ -->
     <div id="divmain">
