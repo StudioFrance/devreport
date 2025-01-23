@@ -20,35 +20,30 @@
             min-height: 100vh; /* フッターを下部に固定するために使用 */
         } 
 
-        /* 背景画像コンテナ */
+
+        /* 背景画像を固定配置 */
         .background {
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); /* 中央揃え */
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            image-rendering: pixelated;
-            image-rendering: crisp-edges;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
             z-index: -1;
         }
-
-        /* Top位置の背景 */
+    
+        /* 背景画像の個別設定 */
         .top {
             background-image: url('captures/background-top.jpg');
-            background-position: top center; /* 上端を基準に配置 */
         }
-
-        /* Middle位置の背景 */
+    
         .middle {
             background-image: url('captures/background-middle.jpg');
-            background-position: center center; /* 中央を基準に配置 */
         }
-
-        /* Bottom位置の背景 */
+    
         .bottom {
             background-image: url('captures/background-bottom.jpg');
-            background-position: bottom center; /* 下端を基準に配置 */
         }
 
         /* 全体のコンテナ */
