@@ -21,29 +21,37 @@
         } 
 
 
-        /* 背景画像を固定配置 */
+        /* 背景画像共通設定 */
         .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            z-index: -1;
+            position: fixed; /* 固定配置 */
+            left: 50%; /* 水平方向の中央に配置 */
+            transform: translateX(-50%); /* 水平方向の中央揃え */
+            width: 100%; /* 画面幅いっぱいに設定 */
+            height: auto; /* 縦横比を維持して高さを自動調整 */
+            background-size: cover; /* 背景画像を画面幅に合わせる */
+            background-repeat: no-repeat; /* 背景画像を繰り返さない */
+            z-index: -1; /* 背景画像を背面に配置 */
         }
     
-        /* 背景画像の個別設定 */
+        /* Top：画面上端を基準に配置 */
         .top {
-            background-image: url('captures/background-top.jpg');
+            top: 0; /* 上端を基準に0pxの位置 */
+            transform: translateX(-50%) translateY(0); /* 水平中央揃え + 上端基準 */
+            background-image: url('captures/background-top.jpg'); /* 背景画像 */
         }
     
+        /* Middle：画面中央に配置 */
         .middle {
-            background-image: url('captures/background-middle.jpg');
+            top: 50%; /* 垂直方向の中央に配置 */
+            transform: translate(-50%, -50%); /* 水平・垂直ともに中央揃え */
+            background-image: url('captures/background-middle.jpg'); /* 背景画像 */
         }
     
+        /* Bottom：画面下端を基準に配置 */
         .bottom {
-            background-image: url('captures/background-bottom.jpg');
+            bottom: 0; /* 下端を基準に0pxの位置 */
+            transform: translateX(-50%) translateY(0); /* 水平中央揃え + 下端基準 */
+            background-image: url('captures/background-bottom.jpg'); /* 背景画像 */
         }
 
         /* 全体のコンテナ */
