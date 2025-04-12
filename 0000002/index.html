@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>s i m o o n  d e v  r e p o r t</title>
+    <title>Page not found</title>
     <style>
         
         /* ページ全体のスタイル */
         body {
             margin: 0;
             padding: 0;
-            background-color: black; /* タイトル背景色 */
+            background-color: white; /* タイトル背景色 */
             
-            color: white; /* テキスト色を白に設定 */
+            color: black; /* テキスト色を白に設定 */
             font-family: Arial, sans-serif;
             overflow-x: hidden; /* 横スクロールを無効化 */
             display: flex;
@@ -51,7 +51,6 @@
             background-image: url('captures/background-bottom.jpg');
         }
 
-
         /* 全体のコンテナ */
         #divmain {
             flex: 1;
@@ -64,25 +63,27 @@
         /* タイトルのスタイル */
         #divmain h1 {
             text-align: center;
-            margin: 100px 0; /* タイトル上下に100pxの余白を設定 */
+            margin: 55px 0; /* タイトル上下に100pxの余白を設定 */
             padding: 0;
-            color: white;
+            color: black;
+            font-weight: normal;
             white-space: nowrap; /* 改行を禁止 */
             overflow: hidden; /* 必要に応じてはみ出し部分を隠す */
             text-overflow: ellipsis; /* はみ出した場合、末尾に「...」を表示 */
-            font-size: 2.5rem; /* デフォルトのフォントサイズ */
+            font-size: 4rem; /* デフォルトのフォントサイズ */
+            letter-spacing: -0.15em;
         }
 
         /* メディアクエリを使用してフォントサイズを調整 */
         @media (max-width: 768px) {
             #divmain h1 {
-                font-size: 2rem; /* タブレット幅以下でフォントを小さく */
+                font-size: 4rem; /* タブレット幅以下でフォントを小さく */
             }
         }
 
         @media (max-width: 480px) {
             #divmain h1 {
-                font-size: 1.5rem; /* スマートフォン幅でさらに小さく */
+                font-size: 4rem; /* スマートフォン幅でさらに小さく */
             }
         }
 
@@ -106,24 +107,60 @@
             image-rendering: crisp-edges; /* 一部のブラウザで互換性を確保 */
         }
         
-        /* リンクの色を設定 */
-        a {
-          color: white; 
-          text-decoration: none;
-        }
-        
-        /* リンクにホバーしたときのスタイルを設定 */
-        a:hover {
-          color: white;
-          text-decoration: none;
-        }
-
         /* フッターのスタイル */
         footer {
             text-align: center; /* 中央寄せ */
             padding: 80px 0; /* 上下に余白を設定 */
-            color: white; /* フッターテキスト色 */
+            color: black; /* フッターテキスト色 */
         }
+        
+        /* リンクの色を設定 */
+        a.link1{
+          color: black; 
+          text-decoration: none;
+        }
+        
+        /* リンクにホバーしたときのスタイルを設定 */
+        a.link1:hover{
+          color: black;
+          text-decoration: none;
+        }
+        /* リンクの色を設定 */
+        a.link2{
+          color: #3366FF; 
+          text-decoration: none;
+        }
+        
+        /* リンクにホバーしたときのスタイルを設定 */
+        a.link2:hover {
+          color: #3366FF;
+          text-decoration: underline;
+        }
+        /* リンクの色を設定 */
+        a.link3{
+          color: #777; 
+          text-decoration: none;
+        }
+        
+        /* リンクにホバーしたときのスタイルを設定 */
+        a.link3:hover {
+          color: #777;
+          text-decoration: underline;
+        }
+        
+        .intro-text {
+            text-align: center;
+            color: #777; /* グレー */
+            font-size: 1rem;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .intro-text strong {
+            font-weight: bold;
+            color: #777; /* ボールド部分は少し濃いグレー */
+        }
+
     </style>
 </head>
 <body>
@@ -131,24 +168,25 @@
     <!-- メインコンテナ -->
     <div id="divmain">
         <h1>
-            s&nbsp;
-            i&nbsp;
-            m&nbsp;
-            <a href="https://studiofrance.github.io/devreport/0000000/">o</a>&nbsp;
-            <a href="https://studiofrance.github.io/devreport/0000001/">o</a>&nbsp;
-            n&nbsp;
-            &nbsp;
-            d&nbsp;
-            e&nbsp;
-            v&nbsp;
-            &nbsp;
-            r&nbsp;
-            e&nbsp;
-            p&nbsp;
-            <a href="https://studiofrance.github.io/devreport/0000002/">o</a>&nbsp;
-            r&nbsp;
-            t&nbsp;
+            4
+            <a href="https://studiofrance.github.io/devreport/0000003/" class="link1">0</a>
+            4
         </h1>
+
+        <div class="intro-text">
+            <strong>File not found</strong><br><br>
+            The site configured at this address does not contain the requested file.<br><br>
+            If this is your site, make sure that the filename case matches the URL as well as any<br>
+            file permissions.<br>
+            For root URLs (like http://example.com/) you must provide an index.html file.<br><br>
+            <a href="https://docs.github.com/en/pages" class="link2">Read the full documentation </a>
+            for more information about using 
+            <strong>GitHub Pages.</strong><br><br><br>
+            <a href="https://www.githubstatus.com/" class="link3">GitHub Status </a>
+            ー
+            <a href="https://x.com/githubstatus" class="link3">@Koms420 </a>
+
+        </div>
     
         <!-- 画像を表示するコンテナ -->
         <div class="images">
@@ -156,12 +194,6 @@
         </div>
         
     </div>
-    
-    <!-- フッター -->
-    <footer>
-        <p>&copy; 2025 simoon by studio france</p>
-        <p>studio.france0131@gmail.com</p>
-    </footer>
     
 </body>
 </html>
