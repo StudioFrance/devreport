@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send that message</title>
+    <style>
+        
+        /* ページ全体のスタイル */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* タイトル背景色 */
+            
+            color: white; /* テキスト色を白に設定 */
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* 横スクロールを無効化 */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* フッターを下部に固定するために使用 */
+        } 
+
+
+        .background {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%); /* 横方向中央揃え */
+            width: 100vw; /* ビューポートの幅に合わせる */
+            height: 100vh; /* ビューポートの高さに合わせる */
+            background-size: contain; /* アスペクト比を維持して表示 */
+            background-repeat: no-repeat; /* 繰り返しを無効 */
+            z-index: -1; /* 背景を後ろに配置 */
+            image-rendering: pixelated; /* ピクセル化された描画を有効化 */
+            image-rendering: crisp-edges; /* 一部のブラウザで互換性を確保 */
+        }
+        
+        /* 背景画像の個別設定 */
+        .top {
+            top: 0; /* 画面上端を基準に配置 */
+            background-image: url('captures/background-top.jpg');
+        }
+        
+        .middle {
+            top: 50%; /* 画面中央に配置 */
+            transform: translate(-50%, -50%); /* 横・縦方向の中央揃え */
+            background-image: url('captures/background-middle.jpg');
+        }
+        
+        .bottom {
+            bottom: 0; /* 画面下端を基準に配置 */
+            background-image: url('captures/background-bottom.jpg');
+        }
+
+
+        /* 全体のコンテナ */
+        #divmain {
+            flex: 1;
+            width: 100%; /* ブラウザ幅いっぱい */
+            z-index: 1; /* 背景画像の上に表示 */
+            padding: 0 5px; /* 左右に20pxの余白を設定 */
+            box-sizing: border-box; /* パディングを幅に含める */
+        }
+
+        /* タイトルのスタイル */
+        #divmain h1 {
+            text-align: center;
+            margin: 100px 0; /* タイトル上下に100pxの余白を設定 */
+            padding: 0;
+            color: white;
+            white-space: nowrap; /* 改行を禁止 */
+            overflow: hidden; /* 必要に応じてはみ出し部分を隠す */
+            text-overflow: ellipsis; /* はみ出した場合、末尾に「...」を表示 */
+            font-size: 2.5rem; /* デフォルトのフォントサイズ */
+        }
+
+        /* メディアクエリを使用してフォントサイズを調整 */
+        @media (max-width: 768px) {
+            #divmain h1 {
+                font-size: 2rem; /* タブレット幅以下でフォントを小さく */
+            }
+        }
+
+        @media (max-width: 480px) {
+            #divmain h1 {
+                font-size: 1.5rem; /* スマートフォン幅でさらに小さく */
+            }
+        }
+
+        /* 画像コンテナ */
+        .images {
+            display: flex;
+            flex-direction: column; /* 縦に画像を並べる */
+            align-items: center;
+            gap: 100px; /* 画像の上下間隔を100pxに設定 */
+            margin-top: 20px;
+        }
+
+        /* 画像のスタイル */
+        img {
+            max-width: calc(85% - 10px); /* ブラウザ幅から左右20pxずつ引いたサイズ */
+            height: auto;
+        }
+        
+        .pixel-image {
+            image-rendering: pixelated; /* ピクセル化された描画を有効化 */
+            image-rendering: crisp-edges; /* 一部のブラウザで互換性を確保 */
+        }
+        
+        /* リンクの色を設定 */
+        a {
+          color: white; 
+          text-decoration: none;
+        }
+        
+        /* リンクにホバーしたときのスタイルを設定 */
+        a:hover {
+          color: white;
+          text-decoration: none;
+        }
+        #divmain h1 {
+            text-decoration: none;
+            color: inherit;
+            /*letter-spacing: 0.3rem; */
+        }
+
+        /* フッターのスタイル */
+        footer {
+            text-align: center; /* 中央寄せ */
+            padding: 80px 0; /* 上下に余白を設定 */
+            color: white; /* フッターテキスト色 */
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- メインコンテナ -->
+    <div id="divmain">
+        <h1>
+            t h a n k u 4 f i n d i n g m e
+        </h1>
+    
+        <!-- 画像を表示するコンテナ -->
+        <div class="images">
+            <img src="captures/image00.png" alt="Image 1" class="pixel-image">
+        </div>
+        
+    </div>
+    
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 2025 simoon by studio france</p>
+        <p>studio.france0131@gmail.com</p>
+    </footer>
+    
+</body>
+</html>
